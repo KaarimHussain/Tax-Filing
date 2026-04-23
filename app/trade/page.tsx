@@ -90,7 +90,7 @@ export default function Trade() {
               </ul>
            </div>
            <div className="bg-brand-navy text-white rounded-3xl p-12 flex flex-col justify-center shadow-2xl">
-              <h3 className="text-2xl font-bold mb-6">Open to Any Niche</h3>
+              <h3 className="text-2xl font-bold mb-6 text-white">Open to Any Niche</h3>
               <p className="text-white/60 mb-8 leading-relaxed">
                 We are not limited to one product category. We are open to supporting clients across different niches depending on product demand, manufacturing feasibility, and supply requirements. Whether the need is for private label products, general supply, bulk sourcing, or export-ready goods, we are ready to explore the opportunity.
               </p>

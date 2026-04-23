@@ -6,8 +6,8 @@ export default function Stats() {
   ];
 
   return (
-    <section className="py-32 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section>
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-brand-navy/30 text-sm font-medium mb-16 uppercase tracking-widest">
           Our Numbers Speak
         </p>

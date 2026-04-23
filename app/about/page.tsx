@@ -51,7 +51,7 @@ export default function AboutUs() {
         </div>
 
         <div className="mb-20 px-8 py-16 bg-brand-navy text-white rounded-3xl text-center shadow-2xl">
-           <h2 className="text-3xl font-bold mb-12">Why Choose M. E. T Ventures?</h2>
+           <h2 className="text-3xl font-bold mb-12 text-white">Why Choose M. E. T Ventures?</h2>
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 { title: 'Multi-service support model', icon: '⚡' },
@@ -67,7 +67,7 @@ export default function AboutUs() {
            </div>
         </div>
 
-        <div className="bg-slate-50 rounded-3xl overflow-hidden py-16 border border-brand-navy/5">
+        <div>
             <h2 className="text-4xl font-black text-center mb-8 uppercase tracking-tighter text-brand-navy/5">Execution Excellence</h2>
             <Stats />
             <div className="text-center mt-12">

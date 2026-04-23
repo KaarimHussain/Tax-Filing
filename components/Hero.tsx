@@ -2,11 +2,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-24 bg-white">
-      {/* Background Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-red rounded-full filter blur-[120px] opacity-5 animate-pulse"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-navy rounded-full filter blur-[120px] opacity-10"></div>
-
+    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-24 bg-white">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-5xl md:text-7xl font-extrabold text-brand-navy mb-8 leading-[1.1] tracking-tight">
           Growth, Commerce, and Trade - <br className="hidden md:block" />

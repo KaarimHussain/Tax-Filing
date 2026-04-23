@@ -1,3 +1,5 @@
+"use client"
+
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import LogoStrip from "@/components/LogoStrip";
@@ -6,21 +8,27 @@ import Link from "next/link";
 import ExecutionCarousel from "@/components/ExecutionCarousel";
 import PortfolioBooklet from "@/components/PortfolioBooklet";
 import Image from "next/image";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function Home() {
   return (
     <div className="flex flex-col space-y-0">
       <Hero />
-      
+
       {/* Centered platform logos are inside LogoStrip */}
       <LogoStrip />
 
       {/* E-commerce Section — Hero/Feature Image */}
       <section className="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
-        <Image 
-          src="/images/img_23.png" 
-          alt="E-commerce Excellence" 
-          fill 
+        <Image
+          src="/images/img_23.png"
+          alt="E-commerce Excellence"
+          fill
           className="object-cover"
           priority
         />
@@ -32,8 +40,8 @@ export default function Home() {
             <p className="text-white/90 text-xl font-medium mb-8">
               Managing brands across Amazon, Walmart, and TikTok Shop with precision.
             </p>
-            <Link 
-              href="/e-commerce" 
+            <Link
+              href="/e-commerce"
               className="bg-white text-brand-navy px-8 py-3 rounded-full font-bold hover:bg-brand-red hover:text-white transition-all shadow-lg"
             >
               Learn More
@@ -56,18 +64,43 @@ export default function Home() {
               A deep dive into our work across TikTok Shop, Walmart, and Amazon.
             </p>
           </div>
-          
+
           <PortfolioBooklet />
-          
+
           <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="glass-card overflow-hidden border-2 border-brand-navy/5">
-              <Image 
-                src="/images/img_19.jpg" 
-                alt="TikTok & Walmart Screenshot" 
-                width={800} 
-                height={600} 
-                className="w-full h-auto object-cover"
-              />
+              <Carousel
+                className="w-full"
+                opts={{
+                  loop: true,
+                }}
+                plugins={[
+                  Autoplay({
+                    delay: 1500,
+                  })
+                ]}
+              >
+                <CarouselContent>
+                  <CarouselItem>
+                    <Image
+                      src="https://images.unsplash.com/photo-1596831749402-783c83a82655?q=80&w=926&auto=format&fit=crop"
+                      alt="TikTok Screenshot"
+                      width={800}
+                      height={600}
+                      className="w-full h-auto object-cover"
+                    />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <Image
+                      src="https://images.unsplash.com/photo-1708484061139-6a6a8daacccc?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Walmart"
+                      width={800}
+                      height={600}
+                      className="w-full h-auto object-cover"
+                    />
+                  </CarouselItem>
+                </CarouselContent>
+              </Carousel>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">TikTok & Walmart Integration</h3>
                 <p className="text-brand-navy/60 text-sm">Real-time performance monitoring and marketplace scaling results.</p>
