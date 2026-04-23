@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import { PageFlip } from 'page-flip';
+import { PageFlip, SizeType } from 'page-flip';
 
 const PAGES = [
   '/images/img_1.jpg', '/images/img_2.jpg', '/images/img_3.jpg', '/images/img_4.jpg',
@@ -22,7 +22,7 @@ export default function PortfolioBooklet() {
         pageFlipRef.current = new PageFlip(bookletRef.current, {
           width: 550,
           height: 733,
-          size: 'stretch',
+          size: SizeType.STRETCH,
           minWidth: 315,
           maxWidth: 1000,
           minHeight: 420,
